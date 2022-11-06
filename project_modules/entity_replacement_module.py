@@ -7,7 +7,7 @@ import tensorflow_hub as tf_hub
 from nltk.corpus import wordnet
 
 WORDNET = wordnet
-PATTERN_STR = r'[^project_modules-zA-Z\s]+'  # ^ char negates the pattern that follows it.
+PATTERN_STR = r'[^a-zA-Z\s]+'  # ^ char negates the pattern that follows it.
 CLEAN_TEXT_PATTERN = re.compile(PATTERN_STR)
 SP = spacy.load("en_core_web_sm")
 STANZA_CONSTITUENCY_PIPELINE = stanza.Pipeline(lang='en', processors='tokenize,pos,constituency')
